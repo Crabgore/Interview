@@ -2,7 +2,7 @@ package printing;
 
 import java.util.List;
 
-class PrintReport{
+class PrintReport implements ShowReport{
     public void output(List<ReportItem> items){
         System.out.println("Output to printer");
         for(ReportItem item : items){
