@@ -5,6 +5,11 @@ import java.util.List;
 
 class Report{
     private List<ReportItem> items; // Отчетные данные
+    private ShowReport showReport;
+
+    public Report(ShowReport showReport) {
+        this.showReport = showReport;
+    }
 
     // расчет отчетных данных
     public void calculate(){
@@ -14,7 +19,6 @@ class Report{
     }
 
     public void output(){
-        PrintReport reportPrint = new PrintReport();
-        reportPrint.output(items);
+        showReport.output(items);
     }
 }

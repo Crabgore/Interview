@@ -2,8 +2,11 @@ package printing;
 
 class Programm{
     public static void main(String[] args){
-        Report report = new Report();
-        report.calculate();
-        report.output();
+        Report printReport = new Report(new PrintReport());
+        Report displayReport = new Report(new DisplayReport());
+        printReport.calculate();
+        displayReport.calculate();
+        printReport.output();
+        displayReport.output();
     }
 }
